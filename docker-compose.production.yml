@@ -1,19 +1,17 @@
 version: '3'
 
 volumes:
-  pg_data_kittygram:
-  static_kittygram:
-  media_kittygram:
+  pg_data_production:
+  static:
+  media:
 
 services:
-  db:
+  db_kitty:
     image: postgres:13.10
-    container_name: kittygram_db
     env_file: .env
     volumes:
-      - pg_data_kittygram:/var/lib/postgresql/data
-  
-backend:
+      - pg_data_production:/var/lib/postgresql/data
+  backend:
     image: greatadmin/kittygram_backend
     env_file: .env
     volumes:
@@ -21,21 +19,17 @@ backend:
       - media:/media
     depends_on:
       - db_kitty
-frontend:
+  frontend:
     image: greatadmin/kittygram_frontend
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static_kittygram:/frontend_static
-gateway:
+      - static:/frontend_static
+  gateway:
     image: greatadmin/kittygram_gateway
     env_file: .env
     volumes:
-      - static_kittygram:/staticfiles
-      - media_kittygram:/media
+      - static:/staticfiles
+      - media:/media
     ports:
       - 9000:80
-
-
-
-
