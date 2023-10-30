@@ -65,6 +65,7 @@ jobs:
           context: ./backend/
           push: true
           tags: greatadmin/kittygram_backend:latest
+
     frontend_tests:
       runs-on: ubuntu-latest
     steps:
