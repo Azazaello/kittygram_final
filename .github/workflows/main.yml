@@ -76,7 +76,7 @@ build_and_push_to_docker_hub:
 
           push: true
 
-          tags: greatadmin/taski_backend:latest
+          tags: greatadmin/kittygram_backend:latest
 
   frontend_tests:
     runs-on: ubuntu-latest
