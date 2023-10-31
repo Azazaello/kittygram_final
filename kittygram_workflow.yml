@@ -114,8 +114,7 @@ jobs:
         with:
           context: ./frontend/
           push: true
-          tags: greatadmin/kittygram_frontend:latest
-
+          tags: greatadmin/kittygram_frontend
 
   build_gateway_and_push_to_docker_hub:
     name: Push gateway Docker image to DockerHub
