@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Kittygram 
 
 ## Описание проекта:
@@ -43,4 +41,3 @@ sudo docker compose -f docker-compose.yml exec backend cp -r /app/collected_stat
 ## Автор: 
    
 [Азиза](https://github.com/Azazaello)
->>>>>>> origin/main
