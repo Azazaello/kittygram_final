@@ -26,7 +26,7 @@ frontend:
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static_kittygram:/frontend_static
+      - static:/frontend_static
       - media:/media
 gateway:
     build: ./nginx/
