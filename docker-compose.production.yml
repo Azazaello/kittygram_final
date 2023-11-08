@@ -24,12 +24,12 @@ services:
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static:/frontend_static
+      - static:/backend_static
   gateway:
     image: greatadmin/kittygram_gateway
     env_file: .env
     volumes:
-      - static:/staticfiles
+      - static:/backend_static
       - media:/media
     ports:
       - 9000:80
