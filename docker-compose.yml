@@ -26,7 +26,7 @@ services:
     build: ./frontend/
     command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static:/frontend_static
+      - static:/backend_static
       - media:/media
  
   gateway:
