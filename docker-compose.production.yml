@@ -18,7 +18,7 @@ services:
       - static:/backend_static
       - media:/media
     depends_on:
-      - db_kitty
+      - db
   frontend:
     image: greatadmin/kittygram_frontend
     env_file: .env
