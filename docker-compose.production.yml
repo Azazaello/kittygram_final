@@ -19,8 +19,6 @@ services:
       - media:/media
     depends_on:
       - db
-    ports:
-      - 10000:9000
   frontend:
     image: greatadmin/kittygram_frontend
     env_file: .env
