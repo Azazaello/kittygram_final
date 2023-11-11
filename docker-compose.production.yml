@@ -22,7 +22,7 @@ services:
   frontend:
     image: greatadmin/kittygram_frontend
     env_file: .env
-    command: cp -r /app/build/. /frontend_static/
+    command: cp -r /app/build/. /backend_static/
     volumes:
       - static:/backend_static
   gateway:
