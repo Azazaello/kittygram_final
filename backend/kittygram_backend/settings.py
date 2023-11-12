@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='token')
 
-DEBUG = False #= os.getenv('DEBUG') == "True"
+DEBUG = True #= os.getenv('DEBUG') == "True"
 
 ALLOWED_HOSTS = ['158.160.15.87', '127.0.0.1', 'localhost', 'backend', 'kitpro.ddns.net']
 
